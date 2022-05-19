@@ -1,0 +1,21 @@
+.card {
+    display: block;
+}
+
+.card-body {
+    display: inline-flex;
+}
+
+.list-group {
+    display: flex;
+    
+}
+
+.list-group-item {
+    margin: 0 0.2em;
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

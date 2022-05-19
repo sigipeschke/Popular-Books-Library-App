@@ -1,0 +1,46 @@
+<!--
+<p>Loading First Book!</p>
+<div *ngIf = "books$ | async as books">
+    <div> {{ books[0].title }} {{ books[0].bookId }} </div>
+    <img src = "{{ books[0].coverImg }}" />
+</div>
+-->
+
+<div class = "card">
+    <div class = "card-header">
+        Select Book Genre
+        <select class = "form-control"
+                (change)="genreSelected($any($event.target).value)">
+            <option value = "">- Display All -</option>
+            <option *ngFor="let genre of genresList"
+                    [value] = "genre"> {{ genre }} </option>
+        </select>
+    </div>
+  
+    <div class = "card-body"
+         *ngIf = "books$ | async as books">
+        <div class = "list-group">
+            <button type = "button"
+                    class = "list-group-item"
+                    *ngFor="let book of books; let i = index"
+                    [ngClass]="{ active: book?.bookId === (selectedBook$ |async)?.bookId }"
+                    (click)="bookSelected(book.bookId)"
+                    style = "background-image: url({{ book.coverImg }});">
+            </button>
+        </div>
+    </div>
+
+    <div class = "card-body"
+         *ngIf = "booksByGenre$ | async as books">
+        <div class = "list-group">
+            <button type = "button"
+                    class = "list-group-item"
+                    *ngFor="let book of books; let i = index"
+                    [ngClass]="{ active: book?.bookId === (selectedBook$ |async)?.bookId }"
+                    (click)="bookSelected(book.bookId)"
+                    style = "background-image: url({{ book.coverImg }});">
+            </button>
+        </div>
+    </div>
+</div>
+
