@@ -12,7 +12,8 @@ export class BookService {
 
     books$ = this.http.get<Book[]>(this.booksUrl)
         .pipe(
-            catchError(this.handleError)
+            catchError(this.handleError),
+            shareReplay(1)
         );
 
     private bookSelectedSubject = new BehaviorSubject<string>("");
@@ -24,9 +25,7 @@ export class BookService {
     ]).pipe(
         map(([books, selectedBookId]) =>
             books.find(book => book.bookId === selectedBookId)
-        ),
-        // tap(book => console.log('Selected Book:', book)),
-        shareReplay(1)
+        )
     );
 
     constructor (private http: HttpClient) {}

@@ -1,0 +1,56 @@
+.card-modal {
+    position: fixed;
+    z-index: 999;
+    left: 10vw;
+    right: 10vw;
+    top: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    height: 100%;
+    width: 80vw;
+    max-width: 1200px;
+    position: relative;
+}
+
+.card-body {
+    display: grid;
+    grid-template-columns: 30% 50% 15% 5%;
+}
+
+.book-cover img{
+    width: 100%;
+}
+
+.book-detail {
+    padding: 0 0.5em;
+}
+
+.desc {
+    grid-column: span 4;
+}
+
+.shop-btn {
+    float: right;
+    display: flex;
+    width: fit-content;
+    background-color: rgb(124, 255, 216);
+    border-radius: 1em;
+    padding: 0.2em 0.8em;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.exit-btn {
+    float: right;
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: rgb(255, 129, 129);
+    border: none;
+    border-radius: 1rem;
+}

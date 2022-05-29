@@ -1,0 +1,194 @@
+﻿<app-book-detail></app-book-detail>
+
+<div class = "body">
+  
+  <div class = "card">
+    <div class = "card-header">
+      Top Picks
+    </div>
+    <div class = "card-body">
+      <div class = "card-body"
+          *ngIf = "booksTopPicks$ | async as books">
+          <p-carousel [value] = "books"
+                      [numVisible] = "6"
+                      [numScroll] = "5"             
+                      [circular] = "false"
+                      [showIndicators] = "false">
+              <ng-template let-book pTemplate="item">
+                  <div class = "book-item">
+                      <button type = "button"
+                          class = "book-item-btn"
+                          [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                          (click)="bookSelected(book.bookId)"
+                          style = "background-image: url({{ book.coverImg }});">
+                      </button>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class = "card">
+    <div class = "card-header">
+      Highly Rated
+    </div>
+    <div class = "card-body">
+      <div class = "card-body"
+          *ngIf = "booksHighlyRated$ | async as books">
+          <p-carousel [value] = "books"
+                      [numVisible] = "6"
+                      [numScroll] = "5"             
+                      [circular] = "false"
+                      [showIndicators] = "false">
+              <ng-template let-book pTemplate="item">
+                  <div class = "book-item">
+                      <button type = "button"
+                          class = "book-item-btn"
+                          [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                          (click)="bookSelected(book.bookId)"
+                          style = "background-image: url({{ book.coverImg }});">
+                      </button>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class = "card">
+    <div class = "card-header">
+      Award Winners
+    </div>
+    <div class = "card-body">
+      <div class = "card-body"
+          *ngIf = "booksAwardWinners$ | async as books">
+          <p-carousel [value] = "books"
+                      [numVisible] = "6"
+                      [numScroll] = "5"             
+                      [circular] = "false"
+                      [showIndicators] = "false">
+              <ng-template let-book pTemplate="item">
+                  <div class = "book-item">
+                      <button type = "button"
+                          class = "book-item-btn"
+                          [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                          (click)="bookSelected(book.bookId)"
+                          style = "background-image: url({{ book.coverImg }});">
+                      </button>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class = "card">
+    <div class = "card-header">
+      Adventure Books
+    </div>
+    <div class = "card-body">
+      <div class = "card-body"
+          *ngIf = "booksGAdventure$ | async as books">
+          <p-carousel [value] = "books"
+                      [numVisible] = "6"
+                      [numScroll] = "5"             
+                      [circular] = "false"
+                      [showIndicators] = "false">
+              <ng-template let-book pTemplate="item">
+                  <div class = "book-item">
+                      <button type = "button"
+                          class = "book-item-btn"
+                          [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                          (click)="bookSelected(book.bookId)"
+                          style = "background-image: url({{ book.coverImg }});">
+                      </button>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class = "card">
+    <div class = "card-header">
+      Romance Books
+    </div>
+    <div class="card-body">
+      <div class = "card-body"
+          *ngIf = "booksGRomance$ | async as books">
+          <p-carousel [value] = "books"
+                      [numVisible] = "6"
+                      [numScroll] = "5"             
+                      [circular] = "false"
+                      [showIndicators] = "false">
+              <ng-template let-book pTemplate="item">
+                  <div class = "book-item">
+                      <button type = "button"
+                          class = "book-item-btn"
+                          [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                          (click)="bookSelected(book.bookId)"
+                          style = "background-image: url({{ book.coverImg }});">
+                      </button>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class = "card">
+    <div class = "card-header">
+      Classic Literature
+    </div>
+    <div class = "card-body">
+      <div class = "card-body"
+          *ngIf = "booksGClassics$ | async as books">
+          <p-carousel [value] = "books"
+                      [numVisible] = "6"
+                      [numScroll] = "5"             
+                      [circular] = "false"
+                      [showIndicators] = "false">
+              <ng-template let-book pTemplate="item">
+                  <div class = "book-item">
+                      <button type = "button"
+                          class = "book-item-btn"
+                          [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                          (click)="bookSelected(book.bookId)"
+                          style = "background-image: url({{ book.coverImg }});">
+                      </button>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+    </div>
+  </div>
+
+  <div class = "card">
+    <div class = "card-header">
+      Childrens Literature
+    </div>
+    <div class = "card-body">
+      <div class = "card-body"
+          *ngIf = "booksGChildrens$ | async as books">
+          <p-carousel [value] = "books"
+                      [numVisible] = "6"
+                      [numScroll] = "5"             
+                      [circular] = "false"
+                      [showIndicators] = "false">
+              <ng-template let-book pTemplate="item">
+                  <div class = "book-item">
+                      <button type = "button"
+                          class = "book-item-btn"
+                          [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                          (click)="bookSelected(book.bookId)"
+                          style = "background-image: url({{ book.coverImg }});">
+                      </button>
+                  </div>
+              </ng-template>
+          </p-carousel>
+      </div>
+    </div>
+  </div>
+
+</div>

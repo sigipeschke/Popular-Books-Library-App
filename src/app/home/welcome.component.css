@@ -1,0 +1,52 @@
+.card {
+    margin: 1rem 0;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-body {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.book-item {
+    display: flex;
+    margin: 0 0.2rem;
+    width: calc(100vw/6);
+    height: calc(100vw/4);
+    max-width: 200px;
+    max-height: 300px;
+}
+
+.book-item:hover {
+    transform: scale(1.1);
+}
+
+.book-item-btn {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
+    width: 20px;
+    height: 100px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+    width: 20px;
+    height: 100px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+}

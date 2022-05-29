@@ -1,46 +1,55 @@
-<!--
-<p>Loading First Book!</p>
-<div *ngIf = "books$ | async as books">
-    <div> {{ books[0].title }} {{ books[0].bookId }} </div>
-    <img src = "{{ books[0].coverImg }}" />
-</div>
--->
+<app-book-detail></app-book-detail>
 
-<div class = "card">
-    <div class = "card-header">
-        Select Book Genre
-        <select class = "form-control"
-                (change)="genreSelected($any($event.target).value)">
-            <option value = "">- Display All -</option>
-            <option *ngFor="let genre of genresList"
-                    [value] = "genre"> {{ genre }} </option>
-        </select>
-    </div>
-  
-    <div class = "card-body"
-         *ngIf = "books$ | async as books">
-        <div class = "list-group">
-            <button type = "button"
-                    class = "list-group-item"
-                    *ngFor="let book of books; let i = index"
-                    [ngClass]="{ active: book?.bookId === (selectedBook$ |async)?.bookId }"
-                    (click)="bookSelected(book.bookId)"
-                    style = "background-image: url({{ book.coverImg }});">
-            </button>
+<div class = "body">
+    <div class = "card">
+        <div class = "card-header">
+            Title
+            <input class = "form-control" type = "text" [(ngModel)] = "titleFilter" />
+        </div>
+
+        <div class = "card-header">
+            Author
+            <input class = "form-control" type = "text" [(ngModel)] = "authorFilter" />
+        </div>
+
+        <div class = "card-header">
+            Genre
+            <select class = "form-control"
+                    (change)="genreSelected($any($event.target).value)">
+                <option value = ""></option>
+                <option *ngFor="let genre of genresList"
+                        [value] = "genre"> {{ genre }} </option>
+            </select>
+        </div>
+
+        <div class = "card-header">
+            Rating
+            <select class = "form-control"
+                    (change)="ratingSelected($any($event.target).value)">
+                <option *ngFor="let rating of ratingList"
+                        [value] = "rating[1]"> {{ rating[0] }} </option>
+            </select>
+        </div>
+
+        <div class = "card-body"
+            *ngIf = "filteredBooks$ | async as books">
+            <p-dataView [value] = "books"
+                        [paginator] = "true"
+                        [rows] = "60"
+                        layout = "grid">
+                <ng-template let-book pTemplate="gridItem">
+                    <div class = "ui-g-12 ui-md-4">
+                        <div class = "book-item">
+                            <button type = "button"
+                                class = "book-item-btn"
+                                [ngClass]="{ active: book?.bookId === (selectedBook$ | async)?.bookId }"
+                                (click)="bookSelected(book.bookId)"
+                                style = "background-image: url({{ book.coverImg }});">
+                            </button>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-dataView>
         </div>
     </div>
-
-    <div class = "card-body"
-         *ngIf = "booksByGenre$ | async as books">
-        <div class = "list-group">
-            <button type = "button"
-                    class = "list-group-item"
-                    *ngFor="let book of books; let i = index"
-                    [ngClass]="{ active: book?.bookId === (selectedBook$ |async)?.bookId }"
-                    (click)="bookSelected(book.bookId)"
-                    style = "background-image: url({{ book.coverImg }});">
-            </button>
-        </div>
-    </div>
 </div>
-
