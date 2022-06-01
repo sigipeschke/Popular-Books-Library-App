@@ -59,9 +59,9 @@
     border-radius: 6px;
 }
 ::ng-deep .p-paginator .p-paginator-first,
-.p-paginator .p-paginator-prev,
-.p-paginator .p-paginator-next,
-.p-paginator .p-paginator-last {
+::ng-deep .p-paginator .p-paginator-prev,
+::ng-deep .p-paginator .p-paginator-next,
+::ng-deep .p-paginator .p-paginator-last {
     background-color: transparent;
     border: 0 none;
     color: #6c757d;
@@ -72,9 +72,9 @@
     border-radius: 50%;
 }
 ::ng-deep .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover,
-.p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover,
-.p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover,
-.p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
+::ng-deep .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover,
+::ng-deep .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover,
+::ng-deep .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
     background: #e9ecef;
     border-color: transparent;
     color: #343a40;

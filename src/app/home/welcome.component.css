@@ -41,7 +41,7 @@
     cursor: pointer;
     background: transparent;
     border: none;
-    border-radius: 0;
+    border-radius: 0.5em;
     color: #6c757d;
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
@@ -53,13 +53,13 @@
     cursor: pointer;
     background: transparent;
     border: none;
-    border-radius: 0;
+    border-radius: 0.5em;
     color: #6c757d;
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover,
-.p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
   color: #343a40;
   border-color: transparent;
   background: #e9ecef;
