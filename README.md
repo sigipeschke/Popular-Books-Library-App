@@ -22,7 +22,9 @@ HTML, CSS, TypeScript, Angular, PrimeNG, RxJS, NodeJS
 
 ## Screenshots
 
-
+![alt text](https://github.com/sigipeschke/Popular-Books-Library-App/blob/master/src/assets/library-img-1.PNG)
+![alt text](https://github.com/sigipeschke/Popular-Books-Library-App/blob/master/src/assets/library-img-2.PNG)
+![alt text](https://github.com/sigipeschke/Popular-Books-Library-App/blob/master/src/assets/library-img-3.PNG)
 
 ## Getting Started
 
