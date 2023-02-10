@@ -8,7 +8,7 @@ See the project live here: https://popular-book-library-app.herokuapp.com/home
 
 ## Features
 
-The feature page presents books in a visually appealing way, similar to Netflix, with carousels of different curated categories such as Top Picks, Highly Rated, Award Winners, and various Genres.
+The feature page presents books in a visually appealing way, with carousels of different curated categories such as Top Picks, Highly Rated, Award Winners, and various Genres.
 
 A search page that allows users to filter the books based on Title, Author, Genre, or Rating.
 
@@ -23,12 +23,15 @@ HTML, CSS, TypeScript, Angular, PrimeNG, RxJS, NodeJS
 ## Screenshots
 
 ### Feature Page
+
 ![alt text](https://github.com/sigipeschke/Popular-Books-Library-App/blob/master/src/assets/library-img-1.PNG)
 
 ### Search Page
+
 ![alt text](https://github.com/sigipeschke/Popular-Books-Library-App/blob/master/src/assets/library-img-2.PNG)
 
 ### Detail Modal
+
 ![alt text](https://github.com/sigipeschke/Popular-Books-Library-App/blob/master/src/assets/library-img-3.PNG)
 
 ## Getting Started
