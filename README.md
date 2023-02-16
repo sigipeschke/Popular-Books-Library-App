@@ -18,7 +18,7 @@ Data is extracted from a 50000+ book csv file and stored in a .json file, retrie
 
 ## Technologies
 
-HTML, CSS, TypeScript, Angular, PrimeNG, RxJS, NodeJS
+HTML, CSS, TypeScript, Angular, PrimeNG, RxJS
 
 ## Screenshots
 
