@@ -4,7 +4,7 @@
 
 Bookworms Haven is an exciting journey into the world of literature. Discover your next favorite book from a wide selection of popular titles, expertly curated into different categories like Top Picks, Highly Rated, Award Winners, and various Genres. Dive into the sea of books and find your treasure with a powerful search feature. This project is an excellent way to explore new books, find your next read and expand your literary horizons.
 
-See the project live here: https://popular-book-library-app.herokuapp.com/home
+See the project live here: https://sp-bookworms-haven.vercel.app/home
 
 ## Features
 
