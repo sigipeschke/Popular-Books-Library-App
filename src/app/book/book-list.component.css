@@ -2,11 +2,15 @@
     display: block;
     margin: 1rem 0;
     width: 100%;
+    border: none;
 }
 
 .card-header {
     display: inline-block;
     width: 25%;
+    font-size: 1.3rem;
+    color: white;
+    border-color: white;
 }
 
 .card-body {
@@ -37,7 +41,7 @@
 }
 
 .book-item:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
 }
 
 .book-item-btn {
@@ -51,9 +55,8 @@
 
 
 ::ng-deep .p-paginator {
-    background: #ffffff;
-    color: #6c757d;
-    border: solid #e9ecef;
+    color: white;
+    border: none;
     border-width: 0;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -64,7 +67,7 @@
 ::ng-deep .p-paginator .p-paginator-last {
     background-color: transparent;
     border: 0 none;
-    color: #6c757d;
+    color: white;
     min-width: 3rem;
     height: 3rem;
     margin: 0.143rem;
@@ -75,9 +78,9 @@
 ::ng-deep .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover,
 ::ng-deep .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover,
 ::ng-deep .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
-    background: #e9ecef;
+    background: transparent;
     border-color: transparent;
-    color: #343a40;
+    color: white;
 }
 ::ng-deep .p-paginator .p-paginator-first {
     border-top-left-radius: 50%;
@@ -90,7 +93,7 @@
 ::ng-deep .p-paginator .p-paginator-current {
     background-color: transparent;
     border: 0 none;
-    color: #6c757d;
+    color: white;
     min-width: 3rem;
     height: 3rem;
     margin: 0.143rem;
@@ -99,7 +102,7 @@
 ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
     background-color: transparent;
     border: 0 none;
-    color: #6c757d;
+    color: white;
     min-width: 3rem;
     height: 3rem;
     margin: 0.143rem;
@@ -107,12 +110,14 @@
     border-radius: 50%;
 }
 ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
-    background: #EFF6FF;
-    border-color: #EFF6FF;
-    color: #1D4ED8;
+    background: transparent;
+    border-color: transparent;
+    color: #e50914;
+    font-weight: bold;
+    transform: scale(1.2);
 }
 ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
-    background: #e9ecef;
+    background: transparent;
     border-color: transparent;
-    color: #343a40;
+    color: white;
 }

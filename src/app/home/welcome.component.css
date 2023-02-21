@@ -1,10 +1,13 @@
 .card {
     margin: 1rem 0;
+    border: none;
 }
 
 .card-header {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
+    border-color: white;
 }
 
 .card-body {
@@ -32,6 +35,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     cursor: pointer;
+    z-index: 999;
 }
 
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev {
@@ -54,15 +58,15 @@
     background: transparent;
     border: none;
     border-radius: 0.5em;
-    color: #6c757d;
+    color: white;
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover,
 ::ng-deep .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
-  color: #343a40;
+  color: white;
   border-color: transparent;
-  background: #e9ecef;
+  background: #6c757d;
 }
 ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button {
   background-color: #ced4da;
@@ -70,9 +74,9 @@
   border-radius: 0;
 }
 ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
-  background: #adb5bd;
+  background: #6c757d;
 }
 ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-  background: #EFF6FF;
-  color: #1D4ED8;
+  background: #6c757d;
+  color: white;
 }

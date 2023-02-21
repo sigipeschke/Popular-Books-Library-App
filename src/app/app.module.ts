@@ -12,6 +12,7 @@ import { BookDetailComponent } from './book/book-detail.component';
 import { CarouselModule } from 'primeng/carousel';
 import { DataViewModule } from 'primeng/dataview';
 import { DialogModule } from 'primeng/dialog';
+import { BookService } from './book/book.service';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { DialogModule } from 'primeng/dialog';
     DataViewModule,
     DialogModule,
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

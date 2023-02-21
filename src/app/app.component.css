@@ -1,14 +1,25 @@
-.nav-link {
-  font-size: large;
-  cursor: pointer;
-}
-  
-.navbar-light .navbar-nav .nav-link.active {
-  color: #007ACC
-}
-
 .navbar-brand {
   margin-left: 10px;
+  margin-right: 50px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar .navbar-nav .nav-link.active {
+  transform: scale(1.1);
+  font-weight: 600;
+  color: #e50914
 }
 
 .container {

@@ -6,3 +6,23 @@
 @import "~primeng/resources/primeng.min.css";
 
 @import 'primeflex/primeflex.css';
+
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #221f1f;
+}
+
+.navbar {
+    background-color: #2f2b2b;
+}
+
+.card-header {
+    background-color: #221f1f;
+}
+
+.card-body {
+    background-color: #221f1f;
+}

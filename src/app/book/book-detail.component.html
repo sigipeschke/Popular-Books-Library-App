@@ -2,30 +2,28 @@
     *ngIf = "book$ | async as book">
     <div class = "card">
         <div class = "card-header">
-            <h2 style = "text-align: center;">{{ book.title }}</h2>
-        </div>
-        <div class = "card-body">
-            <div class = "book-cover">
-                <img src="{{ book.coverImg }}">
-            </div>
-            <div class = "book-detail">
-                <p>Series: {{ book.series }}</p>
-                <p>Author: {{ book.author }}</p>
-                <p>Rating: {{ book.rating }}</p>
-                <p>Publish Date: {{ book.publishDate }}</p>
-                <p>Pages: {{ book.pages }}</p>
-            </div>
-            <div class = "shop-container">
+            <h2>{{ book.title }}</h2>
+            <div class="btn-container">
                 <a class = "shop-btn" href = "{{ amazonLink }}" target = "_blank">Buy</a>
-            </div>
-            <div class = "exit-container">
                 <button type = "button" 
                         class = "exit-btn"
                         (click)="clearBook()">
                     X
                 </button>
             </div>
-            <p class = "desc">Description: {{ book.description }}</p>
+        </div>
+        <div class = "card-body">
+            <div class = "book-cover">
+                <img src="{{ book.coverImg }}">
+            </div>
+            <p class="book-detail">
+                <b>Series:</b> {{ book.series }} <br><br>
+                <b>Author:</b> {{ book.author }} <br><br>
+                <b>Rating:</b> {{ book.rating }} <br><br>
+                <b>Publish Date:</b> {{ book.publishDate }} <br><br>
+                <b>Pages:</b> {{ book.pages }} <br><br>
+                <b>Description:</b> {{ book.description }}
+            </p>
         </div>
         
     </div>
